@@ -1,0 +1,380 @@
+/* the animation itself */
+@keyframes popUp {
+  from {
+    opacity: 0;                             
+    transform: translateY(30px) scale(0.96); 
+  }
+  to {
+    opacity: 1;                             
+    transform: translateY(0) scale(1);      
+  }
+}
+
+.Top-Section,
+.LuzonSection,
+.Visayas-Section,
+.MindanaoSection,
+.Facts,
+.recipe-grid-section h2,
+.card {
+  animation: popUp 0.6s ease backwards;
+}
+
+.card:nth-child(2) { animation-delay: 0.15s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+* {
+  box-sizing: border-box;
+}
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-brand h2 {
+  font-size: 1.2rem;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  color: #ffffff;
+  background-color: #334155;
+}
+
+body{
+  margin: 0;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+.content {
+  margin-left: 220px;
+  padding: 40px;
+}
+.Top-Section{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.55)),
+  url('images/images\ \(6\).jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 20px 20px;
+  color: #fdfdfd;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.nav-links span {
+  margin-left: 15px;
+  cursor: pointer;
+}
+.content-body {
+  display: flex;
+  justify-content: space-between; /* Pushes text to left, image to right */
+  align-items: center;            /* Centers them vertically together */
+  max-width: 1100px;
+  margin: 0 auto;                 /* Centers the content block in the header */
+  gap: 40px; 
+}
+.content-text {
+ font-size: 2rem;   /* Takes up available space on the left */
+}
+
+.content-text h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.content-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.Picture{
+  margin: 0;
+  display: flex;          /* nag tuturn on ng flexbox */
+  justify-content: start; /*centers in the middle of the entire browser window*/
+  align-items: start;     /* nag aalign sa center (top to bottom) */
+}
+.element{
+  width: 200px;
+  height: auto;
+  animation-duration: 10s; /* duration ng animation na ginawa */
+  animation-name: spin;   /* self explanatory */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+  
+
+@keyframes spin{
+  0%{              /* Basically 0% means the start */
+
+  }   
+  100%{           /* basically means end */
+    transform: rotate(360deg); /* condition */
+    border-radius: 50%;
+  }
+}
+.LuzonPicture {
+ flex: 1;
+}
+.LuzonPicture img {
+   width: 100%;
+  max-width: 450px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.LuzonSection {
+  margin-top: 70px;
+}
+.Luzon-Text {
+  flex: 1;
+}
+.Luzon-Tag {
+  color: #e67e22;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.Luzon-Text h2 {
+  font-size: 1.8rem;
+  margin: 8px 0 14px 0;
+}
+.Luzon-Text p {
+   line-height: 1.6;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.LuzonSection {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+.food-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pill {
+  background-color: #eef2f7;
+  color: #334155;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.Facts {
+ background-color: #fff8e7;
+  border-left: 5px solid #f57c00;
+  padding: 1px 25px;
+  margin: 40px 0;
+  border-radius: 8px;
+  height: 135px;
+}
+.Facts h3 {
+  color: #d97706;
+  margin-bottom: 6px;
+  padding: 1px;
+}
+.Visayas-Section{
+   display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+.Visayas-Section{
+ flex-direction: row-reverse;
+}
+.VisayasPicture{
+  flex: 1;
+}
+.VisayasPicture img{
+   width: 100%;
+  max-width: 308px;
+  height: 280px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.VisayasTag {
+   color: #e67e22;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.VisayasText h2 {
+   font-size: 1.8rem;
+  margin: 8px 0 14px 0;
+}
+.VisayasText p{
+ line-height: 1.6;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.VisayasText{
+  flex: 1;
+}
+.MindanaoPicture{
+  flex: 1;
+}
+.MindanaoSection{
+   display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+.MindanaoPicture img{
+   width: 100%;
+  max-width: 1008px;
+  height: 280px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.MindanaoTag{
+ color: #e67e22;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+.MindanaoText h2{
+   font-size: 1.8rem;
+  margin: 5px 1px ;   /* first px is the indicator kung gano kataas and kababa second px is the indicator gano kalapit sa elements */
+}
+.MindanaoText{
+  flex: 1;
+}
+.MindanaoText p{
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.recipe-grid-section {
+  margin-top: 60px;
+}
+.recipe-grid-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.recipe-grid-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+.card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.card-img-holder img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 20px;
+}
+.card-body p {
+  font-size: 0.9rem;
+  color: #949191;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.btn {
+  display: inline-block;
+  background-color: #10b981;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #059669;
+}
+@media (max-width: 800px) {
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  .sidebar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .content-body,
+  .LuzonSection,
+  .Visayas-Section,
+  .MindanaoSection {
+    flex-direction: column;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-text h1 {
+    font-size: 1.6rem;
+  }
+}
